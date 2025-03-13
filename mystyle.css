@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f8f8;
+    background-color: #f8f9fa;
 }
 
 header {
@@ -24,6 +24,7 @@ nav {
     gap: 10px;
     padding: 15px;
     background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .categoria {
@@ -41,13 +42,14 @@ nav {
     gap: 20px;
     flex-wrap: wrap;
     padding: 20px;
+    margin-right: 320px; /* Espacio para el carrito */
 }
 
 .producto {
     background: white;
     padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
     width: 200px;
 }
@@ -60,14 +62,92 @@ nav {
 .precio {
     font-size: 18px;
     font-weight: bold;
-    color: #000;
+    color: #333;
 }
 
 .agregar {
-    background: #FFD700;
+    background: #28a745;
+    color: white;
     border: none;
     padding: 10px;
     border-radius: 50%;
     font-size: 20px;
     cursor: pointer;
+}
+
+.agregar:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Estilos para el carrito */
+#carrito {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    background-color: white;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    overflow-y: auto;
+    border-radius: 15px 0 0 15px;
+}
+
+#carrito h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#lista-carrito {
+    list-style: none;
+    padding: 0;
+}
+
+#lista-carrito li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    background-color: #ffffff;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#lista-carrito img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+#lista-carrito button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+#total {
+    font-weight: bold;
+    color: #333;
+    margin-top: 20px;
+}
+
+#vaciar-carrito {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    margin-top: 20px;
 }
