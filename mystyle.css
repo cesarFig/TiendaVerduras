@@ -2,14 +2,15 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f9fa;
+    background-image: url('https://images.pexels.com/photos/2255920/pexels-photo-2255920.jpeg');
+   
 }
 
 header {
-    background: url('header-bg.jpg') no-repeat center center/cover;
+    background: url('https://static.whataform.com/headers/picture_header_1392938b6cf9338dd6f5_3b637dd1982ad51f2baf63a9161a6aac7111b13b.webp') no-repeat center center/cover;
     color: white;
     text-align: center;
-    padding: 40px;
+    padding: 100px;
     font-size: 32px;
     font-weight: bold;
 }
