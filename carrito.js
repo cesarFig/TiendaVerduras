@@ -78,4 +78,13 @@ function actualizarStocks() {
     }
 }
 
+function comprarCarrito() {  
+    carrito = {};
+    actualizarCarrito();
+    actualizarStocks();
+    alert("Operacion exitosa, gracias por su compra");
+}
+
+
 document.getElementById('vaciar-carrito').addEventListener('click', vaciarCarrito);
+document.getElementById('comprarCarrito').addEventListener('click', comprarCarrito);
