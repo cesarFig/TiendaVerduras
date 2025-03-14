@@ -5,6 +5,10 @@ body {
     background-color: #f8f9fa;
 }
 
+.margin {
+    display: flex;
+}
+
 header {
     background: url('header-bg.jpg') no-repeat center center/cover;
     color: white;
@@ -12,6 +16,8 @@ header {
     padding: 40px;
     font-size: 32px;
     font-weight: bold;
+    width: 100%; /* Aseguramos que el header ocupe todo el ancho */
+    box-sizing: border-box; /* Para que el padding no afecte el ancho */
 }
 
 .oferta {
@@ -20,11 +26,15 @@ header {
 
 nav {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     gap: 10px;
     padding: 15px;
     background: white;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%; 
+    box-sizing: border-box; 
+    flex-wrap: wrap; 
+    text-align: center; /* Centra el texto en los botones */
 }
 
 .categoria {
@@ -36,57 +46,26 @@ nav {
     font-weight: bold;
 }
 
+/* Ajustes de los productos */
 .productos {
     display: flex;
     justify-content: center;
     gap: 20px;
+    max-width: 100%;
     flex-wrap: wrap;
     padding: 20px;
-    margin-right: 320px; /* Espacio para el carrito */
+    box-sizing: border-box; /* Para que no se rompa el layout */
 }
 
-.producto {
-    background: white;
-    padding: 15px;
-    border-radius: 15px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: 200px;
+.divCarro   {
+    padding: 20px;
 }
-
-.producto img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-.precio {
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
-}
-
-.agregar {
-    background: #28a745;
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 50%;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-.agregar:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
-}
-
-/* Estilos para el carrito */
-#carrito {
-    position: fixed;
-    right: 0;
+/* Carrito */
+#carrito {    
     top: 0;
+    right: 0;
     width: 300px;
-    height: 100%;
+    height: auto;
     background-color: white;
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
     padding: 20px;
@@ -150,4 +129,66 @@ nav {
     font-weight: bold;
     width: 100%;
     margin-top: 20px;
+}
+
+/* Productos */
+.producto {
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 25%;
+}
+
+.producto img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.precio {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.agregar {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.agregar:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+section{
+    display: flex;
+    gap: 0;
+    width: 100%;
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Los botones de navegación se alinearán en columna en pantallas pequeñas */
+        padding: 10px;
+    }
+
+    .producto {
+        width: 100%; /* Las tarjetas de productos ocuparán todo el ancho en pantallas pequeñas */
+        max-width: 300px; /* Pero no más de 300px para evitar que se vean demasiado grandes */
+    }
+
+    #carrito {
+        width: 20%; /* El carrito ocupará el 80% del ancho en pantallas pequeñas */
+    }
+
+    header {
+        padding: 20px; /* Reducimos el padding para que sea más pequeño en pantallas pequeñas */
+    }
 }
