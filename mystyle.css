@@ -53,16 +53,23 @@ nav {
     border-radius: 20px;
     cursor: pointer;
     font-weight: bold;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+}
+#toggleCarrito:hover {
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+    
 }
 /* Ajustes de los productos */
 .productos {
     display: flex;
     justify-content: center;
     gap: 20px;
-    max-width: 100%;
+    max-width: 80%;
+    align-items: center;
     flex-wrap: wrap;
     padding: 20px;
     box-sizing: border-box; /* Para que no se rompa el layout */
+    margin-left: 10%;
 }
 
 #divCarro   {
@@ -139,6 +146,12 @@ nav {
     font-weight: bold;
     width: 100%;
     margin-top: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+}
+
+#vaciar-carrito:hover {
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+    
 }
 #comprarCarrito {
     background: #dc3545;
@@ -150,6 +163,11 @@ nav {
     font-weight: bold;
     width: 100%;
     margin-top: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+}
+#comprarCarrito:hover {
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+    
 }
 
 #producto {
@@ -159,6 +177,11 @@ nav {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
     width: 25%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+}
+#producto:hover {
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Aumenta la sombra */
 }
 
 #producto img {
@@ -180,12 +203,19 @@ nav {
     border-radius: 50%;
     font-size: 20px;
     cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+}
+.agregar:hover {
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+    
 }
 
 .agregar:disabled {
     background-color: #ccc;
     cursor: not-allowed;
 }
+
+
 section{
     display: flex;
     gap: 0;
@@ -196,6 +226,7 @@ section{
     width: 10%;
     
 }
+
 /* Media Queries para responsividad */
 @media (max-width: 768px) {
     nav {

@@ -56,8 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const carrito = document.getElementById('divCarro');
     const boton = document.getElementById('toggleCarrito');
     const productos = document.querySelectorAll('#producto'); // Todos los productos
-  
-    // Asegurar que el carrito esté oculto inicialmente
+      
     carrito.style.display = 'none';
   
     // Eliminar cualquier evento previo para evitar múltiples registros
@@ -81,7 +80,9 @@ document.addEventListener('DOMContentLoaded', () => {
       } else {        
         if (carrito.style.display === 'none') {
           carrito.style.display = 'block';  
-          productos.forEach(producto => producto.style.display = 'block'); 
+          productos.forEach(producto =>{
+            producto.style.display = 'block';            
+          }); 
         } else {
           carrito.style.display = 'none';
           productos.forEach(producto => producto.style.display = 'block');           
