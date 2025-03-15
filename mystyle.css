@@ -47,6 +47,13 @@ nav {
     font-weight: bold;
 }
 
+#toggleCarrito{
+    background: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
 /* Ajustes de los productos */
 .productos {
     display: flex;
@@ -58,14 +65,16 @@ nav {
     box-sizing: border-box; /* Para que no se rompa el layout */
 }
 
-.divCarro   {
+#divCarro   {
     padding: 20px;
+    display: none;
 }
 /* Carrito */
-#carrito {    
+#carrito {   
     top: 0;
     right: 0;
     width: 300px;
+    margin: 0;
     height: auto;
     background-color: white;
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
@@ -143,7 +152,7 @@ nav {
     margin-top: 20px;
 }
 
-.producto {
+#producto {
     background: white;
     padding: 15px;
     border-radius: 15px;
@@ -152,7 +161,7 @@ nav {
     width: 25%;
 }
 
-.producto img {
+#producto img {
     width: 100%;
     border-radius: 10px;
 }
@@ -183,6 +192,10 @@ section{
     width: 100%;
 }
 
+#toggleCarrito img{
+    width: 10%;
+    
+}
 /* Media Queries para responsividad */
 @media (max-width: 768px) {
     nav {
